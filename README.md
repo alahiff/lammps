@@ -1,6 +1,8 @@
 # LAMMPS
 
 ## Building the container images
+_Note: this requires access to a machine with the Docker CLI available_
+
 Clone this repo:
 ```
 git clone https://github.com/alahiff/lammps.git
@@ -21,6 +23,8 @@ docker push alahiff/lammps-openmpi-omp:latest
 ```
 
 ## Basic tests using Docker
+_Note: this requires access to a machine with the Docker CLI available_
+
 Running the benchmarks using Docker as a quick test:
 ```
 wget https://github.com/lammps/lammps/archive/stable_12Dec2018.tar.gz
