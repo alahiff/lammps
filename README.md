@@ -79,6 +79,32 @@ prominence create --name lammps-lj \
                   alahiff/lammps-openmpi-omp:latest \
                   "mpirun -np 4 lmp_mpi -sf omp -in in.lj"
 ```
+> output
+```
+Job created with id 22387
+```
+Checking the status of the job
+```
+prominence list
+```
+> output
+```
+ID      NAME        CREATED               STATUS      ELAPSED      IMAGE                               CMD                                   
+22387   lammps-lj   2019-06-04T14:30:36   completed   0+00:04:39   alahiff/lammps-openmpi-omp:latest   mpirun -np 4 lmp_mpi -sf omp -in in.lj
+```
+Once
+```
+prominence stdout 22387
+```
+> output
+```
+LAMMPS (12 Dec 2018)
+  using 2 OpenMP thread(s) per MPI task
+using multi-threaded neighbor list subroutines
+...
+
+```
+
 
 ### Multiple nodes: MPI + OpenMP
 Here we run one of the benchmark problems using 8 cores in total, but this time with 4 nodes, each running a single MPI process which each run 2 OpenMP threads:
