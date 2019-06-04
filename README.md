@@ -67,7 +67,7 @@ udocker create --name=lammps alahiff/lammps-openmpi-omp
 ## Running using PROMINENCE
 These examples make use of the PROMINENCE Command Line Interface.
 
-### Single node, MPI, OpenMP
+### Single node: MPI + OpenMP
 Here we run one of the benchmark problems using 8 cores, with 4 MPI processes each running 2 OpenMP threads:
 ```
 prominence create --name lammps-lj \
@@ -80,7 +80,7 @@ prominence create --name lammps-lj \
                   "mpirun -np 4 lmp_mpi -sf omp -in in.lj"
 ```
 
-### Multiple nodes, MPI, OpenMP
+### Multiple nodes: MPI + OpenMP
 Here we run one of the benchmark problems using 8 cores in total, but this time with 4 nodes, each running a single MPI process which each run 2 OpenMP threads:
 ```
 prominence create --name lammps-lj \
