@@ -80,3 +80,5 @@ prominence create --name lammps-lj \
                   "mpirun -np 4 lmp_mpi -sf omp -in in.lj"
 ```
 
+### Multiple nodes, MPI, OpenMP
+
