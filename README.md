@@ -76,7 +76,7 @@ prominence create --name lammps-lj \
                   --env OMP_NUM_THREADS=2 \
                   --artifact https://github.com/lammps/lammps/archive/stable_12Dec2018.tar.gz \
                   --workdir lammps-stable_12Dec2018/bench \
-                  alahiff/lammps-openmpi:latest \
+                  alahiff/lammps-openmpi-omp:latest \
                   "mpirun -np 4 lmp_mpi -sf omp -in in.lj"
 ```
 
@@ -92,6 +92,6 @@ prominence create --name lammps-lj \
                   --env OMP_NUM_THREADS=2 \
                   --artifact https://github.com/lammps/lammps/archive/stable_12Dec2018.tar.gz \
                   --workdir lammps-stable_12Dec2018/bench \
-                  alahiff/lammps-openmpi:latest \
+                  alahiff/lammps-openmpi-omp:latest \
                   "lmp_mpi -sf omp -in in.lj"
 ```
