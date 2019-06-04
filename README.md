@@ -1,4 +1,5 @@
 # LAMMPS
+
 ## Building the container images
 Clone this repo:
 ```
@@ -17,4 +18,12 @@ In the above of you should use your own Docker Hub user name of course. Then pus
 ```
 docker push alahiff/lammps-serial-omp:latest
 docker push alahiff/lammps-openmpi-omp:latest
+```
+
+## Basic tests using Docker
+Running the benchmarks using Docker as a quick test:
+```
+wget https://github.com/lammps/lammps/archive/stable_12Dec2018.tar.gz
+tar xzf stable_12Dec2018.tar.gz
+cd 
 ```
