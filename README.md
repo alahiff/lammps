@@ -40,6 +40,27 @@ or EAM:
 docker run -it --rm -v `pwd`:/work --workdir /work -e OMP_NUM_THREADS=2 alahiff/lammps-openmpi-omp:latest lmp_mpi -sf omp -in in.eam
 ```
 
+## Running on DiRAC
+### Using Singularity
+Singularity is available by default on DiRAC. On a login node, pull the required container image, e.g.:
+```
+singularity pull docker://alahiff/lammps-openmpi-omp:latest
+```
+For this example the file `lammps-openmpi-omp-latest.simg` was created.
+
+## Using udocker
+First of all udocker needs to be installed by running:
+```
+curl https://raw.githubusercontent.com/indigo-dc/udocker/master/udocker.py > udocker
+chmod u+rx ./udocker
+./udocker install
+mv udocker ~/bin/.
+```
+Now we can pull the image and create a container:
+```
+
+```
+
 ## Running using PROMINENCE
 
 
