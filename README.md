@@ -1,1 +1,2 @@
-# lammps
+# LAMMPS
+## Building the container images
