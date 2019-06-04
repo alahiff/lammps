@@ -65,5 +65,16 @@ udocker create --name=lammps alahiff/lammps-openmpi-omp
 ```
 
 ## Running using PROMINENCE
-
+### Single node, MPI, OpenMP
+Here we run one of the benchmark problems using 8 cores, with 4 MPI processes each running 2 OpenMP threads.
+```
+prominence create --name lammps-lj \
+                  --cpus 8 \
+                  --memory 8 \
+                  --env OMP_NUM_THREADS=2 \
+                  --artifact https://github.com/lammps/lammps/archive/stable_12Dec2018.tar.gz \
+                  --workdir lammps-stable_12Dec2018/bench \
+                  alahiff/lammps-openmpi:latest \
+                  "mpirun -np 4 lmp_mpi -sf omp -in in.lj"
+```
 
