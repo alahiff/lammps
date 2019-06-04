@@ -41,6 +41,8 @@ docker run -it --rm -v `pwd`:/work --workdir /work -e OMP_NUM_THREADS=2 alahiff/
 ```
 
 ## Running on DiRAC
+There are two options for running LAMMPS on DiRAC in unprivileged containers: Singularity and udocker.
+
 ### Using Singularity
 Singularity is available by default on DiRAC. On a login node, pull the required container image, e.g.:
 ```
@@ -58,7 +60,8 @@ mv udocker ~/bin/.
 ```
 Now we can pull the image and create a container:
 ```
-
+udocker pull alahiff/lammps-openmpi-omp 
+udocker create --name=lammps alahiff/lammps-openmpi-omp
 ```
 
 ## Running using PROMINENCE
