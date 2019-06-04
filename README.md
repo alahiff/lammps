@@ -25,5 +25,6 @@ Running the benchmarks using Docker as a quick test:
 ```
 wget https://github.com/lammps/lammps/archive/stable_12Dec2018.tar.gz
 tar xzf stable_12Dec2018.tar.gz
-cd 
+cd lammps-stable_12Dec2018/bench
+docker run -it --rm -v `pwd`:/work --workdir /work -e OMP_NUM_THREADS=2 alahiff/lammps-openmpi-omp:latest lmp_mpi -sf omp -in in.lj
 ```
