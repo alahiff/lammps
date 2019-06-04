@@ -27,11 +27,11 @@ wget https://github.com/lammps/lammps/archive/stable_12Dec2018.tar.gz
 tar xzf stable_12Dec2018.tar.gz
 cd lammps-stable_12Dec2018/bench
 ```
-The LJ example:
+The LJ benchmark problem:
 ```
 docker run -it --rm -v `pwd`:/work --workdir /work -e OMP_NUM_THREADS=2 alahiff/lammps-openmpi-omp:latest lmp_mpi -sf omp -in in.lj
 ```
-The EAM example:
+The EAM benchmark problem:
 ```
 docker run -it --rm -v `pwd`:/work --workdir /work -e OMP_NUM_THREADS=2 alahiff/lammps-openmpi-omp:latest lmp_mpi -sf omp -in in.eam
 ```
