@@ -65,7 +65,7 @@ udocker create --name=lammps alahiff/lammps-openmpi-omp
 ```
 
 ## Running using PROMINENCE
-These examples make use of the PROMINENCE Command Line Interface.
+These examples make use of the PROMINENCE Command Line Interface. See https://prominence-eosc.github.io/docs/ for more information.
 
 ### Single node: MPI + OpenMP
 Here we run one of the benchmark problems using 8 cores, with 4 MPI processes each running 2 OpenMP threads:
