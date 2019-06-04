@@ -39,3 +39,5 @@ or EAM:
 ```
 docker run -it --rm -v `pwd`:/work --workdir /work -e OMP_NUM_THREADS=2 alahiff/lammps-openmpi-omp:latest lmp_mpi -sf omp -in in.eam
 ```
+
+## Running using PROMINENCE
