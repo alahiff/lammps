@@ -1,6 +1,4 @@
----
-title: Running LAMMPS on clouds
----
+# Running LAMMPS on clouds
 
 ## Building the container images
 _Note: this requires access to a machine with the Docker CLI available_
